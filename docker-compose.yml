@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   rabbitmq1:
     image: rabbitmq:3-management
     hostname: rabbitmq1
@@ -9,6 +10,7 @@ services:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
       - RABBITMQ_DEFAULT_VHOST=${RABBITMQ_DEFAULT_VHOST}
+
   rabbitmq2:
     image: rabbitmq:3-management
     hostname: rabbitmq2
@@ -19,6 +21,7 @@ services:
     volumes:
       - ./cluster-entrypoint.sh:/usr/local/bin/cluster-entrypoint.sh
     entrypoint: /usr/local/bin/cluster-entrypoint.sh
+
   rabbitmq3:
     image: rabbitmq:3-management
     hostname: rabbitmq3
@@ -29,6 +32,7 @@ services:
     volumes:
       - ./cluster-entrypoint.sh:/usr/local/bin/cluster-entrypoint.sh
     entrypoint: /usr/local/bin/cluster-entrypoint.sh
+    
   haproxy:
     image: haproxy:1.7
     volumes:
