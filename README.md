@@ -2,7 +2,7 @@
 
 There are a lots of good options if you want to run a [RabbitMQ](https://hub.docker.com/_/rabbitmq/) cluster in [docker](http://docker.com/). Here's an solution that only rely on [docker official images](https://hub.docker.com/_/rabbitmq/) :tada:
 
-The main benifit with this approach is that you can use [any version](https://hub.docker.com/r/library/rabbitmq/tags/) of RabbitMQ, which is maintaied by the good folks over at docker.
+The main benifit with this approach is that you can use [any version](https://hub.docker.com/r/library/rabbitmq/tags/) of RabbitMQ, which is maintaied by docker and will be up-to-date with future releases.
 
 ## Install
 
@@ -14,9 +14,9 @@ The main benifit with this approach is that you can use [any version](https://hu
 
 Most things will be how you expect:
 
-* The default username and password is `guest`/`guest`
+* The default username and password are `guest`/`guest`
 * The broker accepts connections on `localhost:5672`
-* The Management interface will be found at `localhost:15672`
+* The Management interface is found at `localhost:15672`
 
 ## Customize
 
