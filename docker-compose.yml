@@ -12,13 +12,23 @@ services:
   rabbitmq2:
     image: rabbitmq:3-management
     hostname: rabbitmq2
+    depends_on:
+      - rabbitmq1
     environment:
       - RABBITMQ_ERLANG_COOKIE=${RABBITMQ_ERLANG_COOKIE}
+    volumes:
+      - ./cluster-entrypoint.sh:/usr/local/bin/cluster-entrypoint.sh
+    entrypoint: /usr/local/bin/cluster-entrypoint.sh
   rabbitmq3:
     image: rabbitmq:3-management
     hostname: rabbitmq3
+    depends_on:
+      - rabbitmq1
     environment:
       - RABBITMQ_ERLANG_COOKIE=${RABBITMQ_ERLANG_COOKIE}
+    volumes:
+      - ./cluster-entrypoint.sh:/usr/local/bin/cluster-entrypoint.sh
+    entrypoint: /usr/local/bin/cluster-entrypoint.sh
   haproxy:
     image: haproxy:1.7
     volumes:
