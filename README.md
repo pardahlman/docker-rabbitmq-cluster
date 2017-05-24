@@ -27,3 +27,7 @@ The `.env` file contains environment variables that can be used to change the de
 This `docker-compose.yml` file comes with the latest version of [HA Proxy](http://www.haproxy.org/), an open source software that provides a high availability load balancer and proxy server.
 
 It should be fairly easy to add a [`port mapping`](https://docs.docker.com/compose/compose-file/#ports) for the individual containers if it is desired to connect to a specific broker node.
+
+## Read more
+
+I wrote [a blog post](http://localhost:4000/2017/05/24/cluster-rabbitmq-in-docker/) that explains some of the ideas behind this repo.
