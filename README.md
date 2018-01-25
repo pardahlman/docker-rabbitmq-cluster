@@ -30,4 +30,4 @@ It should be fairly easy to add a [`port mapping`](https://docs.docker.com/compo
 
 ## Read more
 
-I wrote [a blog post](http://localhost:4000/2017/05/24/cluster-rabbitmq-in-docker/) that explains some of the ideas behind this repo.
+I wrote [a blog post](fellowdeveloper.se/2017/05/24/cluster-rabbitmq-in-docker/) that explains some of the ideas behind this repo.
