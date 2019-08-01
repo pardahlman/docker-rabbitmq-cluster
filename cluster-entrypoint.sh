@@ -9,6 +9,10 @@ set -e
 
 # Do the cluster dance
 rabbitmqctl stop_app
+
+# MUST have this line, otherwise the node will be blocked to join cluster again.
+rabbitmqctl reset
+
 rabbitmqctl join_cluster rabbit@rabbitmq1
 
 # Stop the entire RMQ server. This is done so that we
