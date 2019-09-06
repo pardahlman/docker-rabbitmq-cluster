@@ -7,16 +7,17 @@ The main benifit with this approach is that you can use [any version](https://hu
 ## Install
 
 ```
-> git clone https://github.com/pardahlman/docker-rabbitmq-cluster.git
+> git clone https://github.com/ameizi/docker-rabbitmq-cluster.git
 > cd docker-rabbitmq-cluster
 > docker-compose up
 ```
 
 Most things will be how you expect:
 
-* The default username and password are `guest`/`guest`
-* The broker accepts connections on `localhost:5672`
+* The Default username and password are `guest`/`guest`
+* The Broker accepts connections on `localhost:5672`
 * The Management interface is found at `localhost:15672`
+* The HAProxy interface is found at `localhost:1936`
 
 ## Customize
 
