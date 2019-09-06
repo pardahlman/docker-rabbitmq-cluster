@@ -7,7 +7,7 @@ The main benifit with this approach is that you can use [any version](https://hu
 ## Install
 
 ```
-> git clone https://github.com/pardahlman/docker-rabbitmq-cluster.git
+> git clone https://github.com/ameizi/docker-rabbitmq-cluster.git
 > cd docker-rabbitmq-cluster
 > docker-compose up
 ```

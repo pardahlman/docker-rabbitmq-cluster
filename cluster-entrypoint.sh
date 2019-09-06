@@ -10,7 +10,7 @@ set -e
 # Do the cluster dance
 rabbitmqctl stop_app
 
-# MUST have this line, otherwise the node will be blocked to join cluster again.
+# Must have this line, otherwise the node will be blocked to join cluster again.
 rabbitmqctl reset
 
 # Join cluster
