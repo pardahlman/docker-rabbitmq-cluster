@@ -4,6 +4,18 @@ There are a lots of good options if you want to run a [RabbitMQ](https://hub.doc
 
 The main benifit with this approach is that you can use [any version](https://hub.docker.com/r/library/rabbitmq/tags/) of RabbitMQ, which is maintaied by docker and will be up-to-date with future releases.
 
+## Linefeed issues with Git on Windows
+
+If you configured your system using CRLF as default, you may change line-endings to LF manually. 
+
+When docker tries to mount the file `cluster-entrypoint.sh` into the containers, linux may fail executing this file, resulting in node-1 and node-2 not running.
+
+Here is how you can configure "LF" to be the default in Windows:
+```
+git config --global core.autocrlf false
+git config --global core.eol lf
+```
+
 ## Install
 
 ```
